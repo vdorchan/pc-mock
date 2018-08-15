@@ -4,5 +4,15 @@
   "description": "A super easy way to mock",
   "main": "index.js",
   "author": "vdorchan <vdorchan@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@koa/cors": "^2.2.2",
+    "cheerio": "^1.0.0-rc.2",
+    "cross-spawn": "^6.0.5",
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-jsonp": "^2.0.2",
+    "koa-router": "^7.4.0",
+    "mockjs": "^1.0.1-beta3"
+  }
 }
