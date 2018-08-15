@@ -1,28 +1,26 @@
 #!/usr/bin/env node
 
 const path = require('path')
+const yargs = require('yargs')
 
-const spawn = require('cross-spawn')
+const server = require('./lib/server')
 
-// const child = spawn('node', ['--version'], { stdio: 'inherit' })
+const argv = yargs
+  .usage('$0 [options] <source>')
+  .options({
+    port: {
+      alias: 'p',
+      description: 'Set port',
+      default: 3000
+    },
+    delay: {
+      alias: 'd',
+      description: 'Add delay to responses (ms)'
+    }
+  })
+  .help('help')
+  .alias('help', 'h')
+  .version(pkg.version)
+  .alias('version', 'v').argv
 
-// console.log(path.join(__dirname, './lib/server.js'))
-const child = spawn('node', [path.join(__dirname, './lib/server.js')], {
-  stdio: 'inherit'
-})
-
-// const child = spawn('pwd', {
-//   stdio: 'inherit'
-// })
-
-// child.stdout.on('data', (data) => {
-//   console.log(`stdout: ${data}`)
-// })
-// child.stderr.on('data', (data) => {
-//   console.log(`stderr: ${data}`)
-// })
-
-// child.on('exit', function(code, signal) {
-//   console.log('child process exited with ' +
-//     `code ${code} and signal ${signal}`)
-// })
+server(argv)
