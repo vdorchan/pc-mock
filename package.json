@@ -1,0 +1,8 @@
+{
+  "name": "pc-mock",
+  "version": "1.0.0",
+  "description": "A super easy way to mock",
+  "main": "index.js",
+  "author": "vdorchan <vdorchan@gmail.com>",
+  "license": "MIT"
+}
