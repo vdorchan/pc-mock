@@ -5,6 +5,16 @@
   "main": "index.js",
   "author": "vdorchan <vdorchan@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vdorchan/pc-mock"
+  },
+  "bugs": {
+    "url": "https://github.com/vdorchan/pc-mock/issues"
+  },
+  "engines": {
+    "node": ">=7.6"
+  },
   "dependencies": {
     "@koa/cors": "^2.2.2",
     "cheerio": "^1.0.0-rc.2",
