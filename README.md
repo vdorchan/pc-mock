@@ -1,9 +1,7 @@
 <h1 align="center"> pc-mock </h1>
 
-<center> 
 [![NPM version][npm-image]][npm-url]
 [![NODE version][node-image]][node-url]
-</center>
 
 ## 介绍
 
