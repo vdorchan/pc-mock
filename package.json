@@ -1,10 +1,13 @@
 {
   "name": "pc-mock",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "Get a full fake REST API with zero coding to mock",
   "main": "index.js",
   "author": "vdorchan <vdorchan@gmail.com>",
   "license": "MIT",
+  "bin": {
+    "pcmock": "index.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/vdorchan/pc-mock"
