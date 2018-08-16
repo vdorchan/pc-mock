@@ -13,12 +13,12 @@ const argv = yargs
   .options({
     port: {
       alias: 'p',
-      description: 'Set port',
+      description: '设置端口号',
       default: 3000
     },
     delay: {
       alias: 'd',
-      description: 'Add delay to responses (ms)'
+      description: '延迟接口响应的时间'
     },
     turnDoc: {
       alias: 't',
@@ -28,6 +28,9 @@ const argv = yargs
   .help('help')
   .alias('help', 'h')
   .version(pkg.version)
+  .example('$0 --port 8080', '')
+  .example('$0 -p 8080 -d 1000', '')
+  .example('$0 -t http://dev58.pcauto.com.cn/auto180610/action/help.jsp bmw.json', '')
   .epilog('https://github.com/vdorchan/pc-mock')
   .alias('version', 'v').argv
 
