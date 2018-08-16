@@ -11,11 +11,11 @@
 
 于是乎，这两天重构了下代码，封装了一下，发布到 npm 上。
 
-使用 pc-mock，会在你本地创建一个服务器，数据将使用 json 文件，利用开发给的接口文档，可以很方便的转换出 json 文件。
+使用 pc-mock，会在你本地创建一个服务器，读取本地的 json 文件，利用开发给的接口文档，可以很方便的转换出 json 文件。
 
 我很懒，所以对我来说，工具一定要方便简单。相信我，只要花几分钟看完 readme，你绝对就会使用了。
 
-这几分钟之后，你的开发效率将会大大的提高，会减少很多调试接口带来的麻烦。
+使用 pc-mock，你的开发效率将会大大的提高，会减少很多调试接口带来的麻烦。
 
 
 ## 快速开始
@@ -87,7 +87,7 @@ $.get(`${ACTION_URL}getUserInfo.jsp`, res => {
 
 最好再了解以下几点：
 
-- json 格式本身是不能包含注释的，但接口文档一般带注释，并且注释还是有点作用的，于是我就允许了注释的存在，然后在访问接口的时候，使用一些代码去消除它。
+- json 格式本身是不能包含注释的，但接口文档一般带注释，并且注释还是有点作用的，于是我就允许了注释的存在，然后在访问接口的时候，使用一些代码去消除它。
 
 - 另外，工具提供了将接口文档转换为 json 文件的功能，只需传入接口文档的链接，就能生成相应的 json 文件。注意：接口文档并不完全规范，所以处理完之后，有必要去进行一些检查改正。
 
@@ -97,7 +97,30 @@ $.get(`${ACTION_URL}getUserInfo.jsp`, res => {
 
 ## Mock
 
-内置了 mock.js， 支持使用 mock 模版，可以更加方便的伪造各种数据。示例：[http://mockjs.com/examples.html](http://mockjs.com/examples.html)
+内置了 mock.js， 支持使用 mock 的数据模版定义，可以更加方便的伪造各种数据。参考：[http://mockjs.com/examples.html#DPD](http://mockjs.com/examples.html#DPD)
+
+```json
+"getLottery": {
+  "code|0-1":1
+}
+```
+
+访问接口，接口返回：
+
+```json
+{
+  "code":0
+}
+```
+
+或
+
+```json
+{
+  "code":1
+}
+```
+
 
 ## 分页加载
 
@@ -109,7 +132,7 @@ $.get(`${ACTION_URL}getUserInfo.jsp`, res => {
   "msg":"获取成功!",
   "awardList|10":[ {
       "name":"测试",//中奖人名字
-      "awardName":"8.88红包"//奖品名
+      "awardName":"8.88红包", //奖品名
       "headImgUrl":"https://tfs.alipayobjects.com/images/partner/T1SGRfXgJbXXXXXXXX" //头像
     }
   ]
