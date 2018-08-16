@@ -44,13 +44,13 @@ yarn global add pc-mock
     "msg": "获取成功",
     "id":2, //用户id
     "chance":1, //剩余抽奖次数
-    "lotteryTimes":1, //已抽次数
+    "lotteryTimes":1 //已抽次数
   },
   "lottery": {
     "code": 1,
     "msg":"恭喜中奖/未中奖",
     "isAward": 1, //是否中奖0否1是
-    "amount": 8.88, //红包金额
+    "amount": 8.88 //红包金额
   }
 }
 ```
@@ -112,7 +112,7 @@ $.get(`${ACTION_URL}getUserInfo.jsp`, res => {
   "awardList|10":[ {
       "name":"测试",//中奖人名字
       "awardName":"8.88红包"//奖品名
-      "headImgUrl":"https://tfs.alipayobjects.com/images/partner/T1SGRfXgJbXXXXXXXX",//头像
+      "headImgUrl":"https://tfs.alipayobjects.com/images/partner/T1SGRfXgJbXXXXXXXX" //头像
     }
   ]
 }
@@ -133,7 +133,7 @@ $.get(`${ACTION_URL}getUserInfo.jsp`, res => {
   "awardList|10":[ {
       "name":"测试$ps",//中奖人名字
       "awardName":"8.88红包$pn", //奖品名
-      "headImgUrl": "https://tfs.alipayobjects.com/images/partner/T1SGRfXgJbXXXXXXXX",//头像
+      "headImgUrl": "https://tfs.alipayobjects.com/images/partner/T1SGRfXgJbXXXXXXXX" //头像
     }
   ]
 }
@@ -150,17 +150,17 @@ $.get(`${ACTION_URL}getUserInfo.jsp`, res => {
   "awardList|10":[{
       "name":"测试3",
       "awardName":"8.88红包2",
-      "headImgUrl": "https://tfs.alipayobjects.com/images/partner/T1SGRfXgJbXXXXXXXX",//头像
+      "headImgUrl": "https://tfs.alipayobjects.com/images/partner/T1SGRfXgJbXXXXXXXX"
     },
     {
       "name":"测试3",
       "awardName":"8.88红包2",
-      "headImgUrl": "https://tfs.alipayobjects.com/images/partner/T1SGRfXgJbXXXXXXXX",//头像
+      "headImgUrl": "https://tfs.alipayobjects.com/images/partner/T1SGRfXgJbXXXXXXXX"
     },
     {
       "name":"测试3",
       "awardName":"8.88红包2",
-      "headImgUrl":" https://tfs.alipayobjects.com/images/partner/T1SGRfXgJbXXXXXXXX",//头像
+      "headImgUrl":" https://tfs.alipayobjects.com/images/partner/T1SGRfXgJbXXXXXXXX"
     }
   ]
 }
