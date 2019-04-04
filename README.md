@@ -53,7 +53,7 @@ yarn global add pc-mock
 }
 ```
 
-或者使用 CommonJS 规范创建 project.js 文件，支持格式更加完美，支持完整的 Mock.js
+0.3.4 版本开始，支持使用 CommonJS 规范创建 project.js 文件，支持格式更加完美，支持完整的 Mock.js
 
 ```javascript
 module.exports = {
