@@ -1,6 +1,6 @@
 {
   "name": "pc-mock",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Get a full fake REST API with zero coding to mock",
   "main": "index.js",
   "author": "vdorchan <vdorchan@gmail.com>",

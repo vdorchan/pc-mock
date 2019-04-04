@@ -11,7 +11,7 @@
 
 于是乎，这两天重构了下代码，封装了一下，发布到 npm 上。
 
-使用 pc-mock，会在你本地创建一个服务器，读取本地的 json 文件，利用开发给的接口文档，可以很方便的转换出 json 文件。
+使用 pc-mock，会在你本地创建一个服务器，读取本地的接口文件，利用开发给的接口文档，可以很方便的转换出 json 文件。
 
 我很懒，所以对我来说，工具一定要方便简单。相信我，只要花几分钟看完 readme，你绝对就会使用了。
 
@@ -47,6 +47,28 @@ yarn global add pc-mock
   "lottery": {
     "code": 1,
     "msg":"恭喜中奖/未中奖",
+    "isAward": 1, //是否中奖0否1是
+    "amount": 8.88 //红包金额
+  }
+}
+```
+
+或者使用 CommonJS 规范创建 project.js 文件，支持格式更加完美，支持完整的 Mock.js
+
+```javascript
+module.exports = {
+  "getUserInfo": {
+    "code": 1,
+    "msg": "获取成功",
+    "id":2, //用户id
+    "chance":1, //剩余抽奖次数
+    "lotteryTimes":1 //已抽次数
+  },
+  "lottery": {
+    "code": 1,
+    "msg": function () {
+      return this.code ? '恭喜中奖' : '未中奖'
+    },
     "isAward": 1, //是否中奖0否1是
     "amount": 8.88 //红包金额
   }
